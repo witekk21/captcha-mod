@@ -1,0 +1,21 @@
+modLoader="javafxmod"
+loaderVersion="[21,)"
+license="MIT"
+
+[[mods]]
+modId="captchamod"
+version="1.0.0"
+displayName="Captcha Auto-Filler"
+authors="witekk21"
+
+[[dependencies.captchamod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[21.4,)"
+    side="CLIENT"
+
+[[dependencies.captchamod]]
+    modId="neoforge"
+    mandatory=true
+    versionRange="[21.4,)"
+    side="CLIENT"

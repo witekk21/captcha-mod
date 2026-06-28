@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.gradle.userdev' version '7.0.80'
+}
+
+version = '1.0'
+group = 'com.example.captchamod'
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.neoforged.net/releases' }
+}
+
+dependencies {
+    implementation 'net.neoforged:neoforge:21.4.82-beta'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
