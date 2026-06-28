@@ -18,6 +18,10 @@ public class CaptchaScreenHandler {
     private static final long COOLDOWN_MS = 1000;
 
     public static void processCaptchaCode(String captchaCode) {
+        if (!CaptchaConfig.isEnabled()) {
+            return;
+        }
+        
         long currentTime = System.currentTimeMillis();
         
         if (captchaCode.equals(lastCaptchaCode) && 
